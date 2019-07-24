@@ -15,7 +15,7 @@ If you are using Git for your project anyway, it might be more useful to add GUC
 
 # Contributing to GUUC
 
-GUUC is supposed to be completely open source, so anyone can contribute. We do want to uphold some level of quality control for the final product, so make sure to read over the guidelines first. To upload your contributions simply clone the repo into the Asset folder of a Unity project, or include it as a submodule. Push changes to a new branch and get going!
+GUUC is supposed to be completely open source, so anyone can contribute. We do want to uphold some level of quality control for the final product, so make sure to read over the guidelines first. If nothing else, **look out for any pieces of text in bold**. To upload your contributions simply clone the repo into the Asset folder of a Unity project, or include it as a submodule. Push changes to a new branch and get going!
 
 ## Guidelines
 
@@ -27,7 +27,7 @@ GUUC is not a place for prefabs or assets. If you want to contribute these to th
 Code may only rely on other functions in the same contribution, or functions on the master branch. No external downloads should ever be necessary.
 
 ### Duplicates
-In order to keep some oversight, duplicates should be avoided AT ALL COSTS. If you want to add a function that is slightly different than an existing one, you should typically just expand that function, with an (optional) parameter to include your use case. If you absolutely must add a new function, make sure that the name of it alone clearly distinghuises what it does and what it does differently.
+In order to keep some oversight, **avoid adding duplicates**. If you want to add a function that is slightly different than an existing one, you should typically just expand that function, with an (optional) parameter to include your use case. If you absolutely must add a new function, make sure that the name of it alone clearly distinghuises what it does and what it does differently.
 
 ### Coding quality
 The code will surely turn into a big fat mess over time, even so, do your best to postpone the inevitable. Never write duplicate code, add formal documentation (///), always document your parameters, come up with names that are short and to the point, but still clear, watch out for performance when dealing with nested loops, avoid messy if/else trees or redundant switch/case blocks, keep methods short, around ~20 lines before you should split it up into (private) subfunctions.
@@ -60,15 +60,16 @@ The most pure of Utility, working entirely in static classes. New classes may be
 Monobehaviour scripts that have a use in the final product
 
 #### EditorComponents
-Monobehaviour scripts that have a use in the Unity Editor<\br>
-**Important Note** Make sure that '0editor scripts' can still compile freely!! The usual strategy here is to make the script itself empty and add editor functionality inside a conditional compile block (#if UNITY_EDITOR ... #endif)
+Monobehaviour scripts that have a use in the Unity Editor<br/>
+**Important Note** Make sure that editor scripts can still compile freely!! The usual strategy here is to make the script itself empty and add editor functionality inside a conditional compile block (#if UNITY_EDITOR ... #endif)
 
 #### Shaders
 Shaders that have a simple function to the point where you wonder why it's not in Unity by default.
 
 ### Various Notes
-Line endings are standardly Windows (CR LF)</br>
-Use extension methods whenever sensible.
+Line endings are standardly Windows (CR LF)<br/>
+Use extension methods whenever sensible.<br/>
+For now we are not comitting meta files. These are already .git ignored.<br/>
 
 # Credits
 Guuc, is does not suuc - WARdd
