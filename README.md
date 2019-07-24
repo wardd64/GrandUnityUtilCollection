@@ -40,7 +40,7 @@ The most pure of Utility, working entirely in static classes. New classes may be
 | Class    | Description                    |
 | --------:| ------------------------------:|
 | Anim     | Animation and Animator related |
-| Binar    | Binary IO |
+| Bits     | Binary IO |
 | Cam      | 3D Camera related |
 | Colrs    | Colors |
 | Compr    | Data Compression |
