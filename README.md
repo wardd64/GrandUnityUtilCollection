@@ -5,7 +5,8 @@ Collection of publicly available, c# Utility functions for Unity3D.
 
 # Introduction
 
-The aim of the GUUC is to independently add functionality to Unity that should really have been included in the default product. Saving, Loading, Comrpessing, Math, Physics, manipulating Vectors, Quaternions, Transforms and much, much more.<br/>
+The aim of the GUUC is to independently add functionality to Unity that should really have been included in the default product. Saving, Loading, Compressing, Math, Physics, manipulating Vectors, Quaternions, Transforms and much, much more.<br/>
+GUUC will provide such functions while not being as intrusive as Unity frameworks and typical closed-source asset packs. In the mean-time, any fancy utility functions you made for your games in the past can find a new life in new games as long as you're willing to share!<br/>
 Anyone can contribute to GUUC, with the community working together we will make the lives of Unity devs around the world a bit easier.
 
 # Making use of GUUC
@@ -18,7 +19,7 @@ If you are using Git for your project anyway, it might be more useful to add GUC
 GUUC is supposed to be completely open source, so anyone can contribute. We do want to uphold some level of quality control for the final product, so make sure to read over the guidelines first. If nothing else, **look out for any pieces of text in bold**. To upload your contributions simply clone the repo into the Asset folder of a Unity project, or include it as a submodule. Push changes to a new branch and get going!
 
 ## Filtering
-Not every piece of c# code -no matter how well written- is fit for the GUUC. Most importantly, the function you want to add needs be something general and flexible so that it can be used in a wide variety of Unity projects. E.g. it must be independant of the structure of the project where it comes from. Long story short, each contribution should be a proper 'Utility' type function. Contributions may also include very general scripts, Monobehaviour, Editor and shader scripts can be included.<br/>
+Not every piece of c# code -no matter how well written- is fit for the GUUC. Most importantly, the function you want to add needs be something general and flexible so that it can be used in a wide variety of Unity projects. It must be independant of the structure of the project where it comes from. In other words, each contribution should be a proper 'Utility' type function. Contributions may also include very general Monobehaviour, Editor and shader scripts.<br/>
 GUUC is not a place for prefabs or assets. If you want to contribute these to the Unity community, make a free asset for them on the asset store.
 
 ## Cross dependencies
@@ -40,11 +41,13 @@ The most pure of Utility, working entirely in static classes. New classes may be
 | --------:| ------------------------------:|
 | Anim     | Animation and Animator related |
 | Binar    | Binary IO |
+| Cam      | 3D Camera related |
 | Colrs    | Colors |
 | Compr    | Data Compression |
 | Files    | File IO |
 | Lerp     | Interpolation and smoothing (not necessarily linear) |
 | Math     | Pure floating point and integer math |
+| Meshs    | Generating or analyzing meshes |
 | Phys     | Unity Physics engine related |
 | Quat     | Rotations |
 | Rand     | Random number / object generation |
@@ -53,21 +56,22 @@ The most pure of Utility, working entirely in static classes. New classes may be
 | Txtur    | Texture processing, 2D or render |
 | Trnsf    | 3D Transforms, Unity parent/Child, component etc. |
 | Vect     | Manipulating vectors of any dimension |
+| Varia    | All the rest |
 
 ### Components
-Monobehaviour scripts that have a use in the final product
+Monobehaviour scripts that perform a simple and generally useful function.
 
 ### EditorComponents
 Monobehaviour scripts that have a use in the Unity Editor<br/>
-**Important Note** Make sure that editor scripts can still compile freely!! The usual strategy here is to make the script itself empty and add editor functionality inside a conditional compile block (#if UNITY_EDITOR ... #endif)
+**Important Note** Make sure that editor scripts can still compile freely!! The usual strategy here is to make the script itself empty and add the actual editor functionality inside a conditional compile block (#if UNITY_EDITOR ... #endif)
 
 ### Shaders
 Shaders that have a simple function to the point where you wonder why it's not in Unity by default.
 
 ## Various Notes
-Line endings are standardly Windows (CR LF)<br/>
+Line endings are Windows (CR LF) by default<br/>
 Use extension methods whenever sensible.<br/>
-For now we are not comitting meta files. These are already .git ignored.<br/>
+For now we are not comitting meta files. These are already .git-ignored.<br/>
 
 # Credits
-Guuc, is does not suuc - WARdd
+Guuc, it does not suuc - WARdd
