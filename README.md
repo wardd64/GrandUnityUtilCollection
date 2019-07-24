@@ -36,9 +36,10 @@ The code will surely turn into a big fat mess over time, even so, do your best t
 Currently, the following subclassifications exist. There is some overlap between these, so do not feel too strictly about how to classify your contribution. In some cases it may be preferrable to add your function to multiple functions.
 
 #### Static Utility Functions
-THe most pure of Utility, working entirely in static classes. New classes may be added as needed, current classes are:
-| Class    |   Description |
-|---------:|:-------------:|
+The most pure of Utility, working entirely in static classes. New classes may be added as needed, current classes are:
+
+| Class    | Description                    |
+| --------:| ------------------------------:|
 | Anim     | Animation and Animator related |
 | Binar    | Binary IO |
 | Colrs    | Colors |
@@ -60,7 +61,7 @@ Monobehaviour scripts that have a use in the final product
 
 #### EditorComponents
 Monobehaviour scripts that have a use in the Unity Editor<\br>
-*Important Note* Make sure that '0editor scripts' can still compile freely!! The usual strategy here is to make the script itself empty and add editor functionality inside a conditional compile block (#if UNITY_EDITOR ... #endif)
+**Important Note** Make sure that '0editor scripts' can still compile freely!! The usual strategy here is to make the script itself empty and add editor functionality inside a conditional compile block (#if UNITY_EDITOR ... #endif)
 
 #### Shaders
 Shaders that have a simple function to the point where you wonder why it's not in Unity by default.
@@ -68,3 +69,6 @@ Shaders that have a simple function to the point where you wonder why it's not i
 ### Various Notes
 Line endings are standardly Windows (CR LF)</br>
 Use extension methods whenever sensible.
+
+# Credits
+Guuc, is does not suuc - WARdd
