@@ -65,6 +65,12 @@ Monobehaviour scripts that perform a simple and generally useful function.
 Monobehaviour scripts that have a use in the Unity Editor<br/>
 **Important Note** Make sure that editor scripts can still compile freely!! The usual strategy here is to make the script itself empty and add the actual editor functionality inside a conditional compile block (#if UNITY_EDITOR ... #endif)
 
+### Helper classes
+Classes that do not implement Monobehaviour, but are rather meant useful to gather common data and functions in other classes.
+
+### Serialization
+Data classes that can be used to save and load scene states
+
 ### Shaders
 Shaders that have a simple function to the point where you wonder why it's not in Unity by default.
 
