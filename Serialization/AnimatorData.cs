@@ -235,7 +235,7 @@ public class AnimatorData : ComponentData {
 			//if playing different animations, check which side we're on right now
 			else {
 				float rightTime = right.currentTime - FrameData.timeToRight;
-				float leftTime = this.currentTime + FrameData.timeOffset;
+				float leftTime = this.currentTime + FrameData.timeToLeft;
 				if(rightTime > 0f)
 					anim.Play(right.currentHash, layer, rightTime / right.currentLength);
 				else
@@ -287,12 +287,12 @@ public class AnimatorData : ComponentData {
 
 			//if no transition was found, try older transition too
 			if(!foundTransition && this.inTransition) {
-				float leftTransTime = this.transitionTime + FrameData.timeOffset;
+				float leftTransTime = this.transitionTime + FrameData.timeToLeft;
 				foundTransition = leftTransTime < this.transitionLength;
 
 				//assign left transition values
 				if(foundTransition) {
-					lerpCurrentTime = this.currentTime + FrameData.timeOffset;
+					lerpCurrentTime = this.currentTime + FrameData.timeToLeft;
 					lerpCurrentLength = this.currentLength;
 					lerpCurrentHash = this.currentHash;
 

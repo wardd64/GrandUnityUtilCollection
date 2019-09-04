@@ -153,6 +153,20 @@ namespace GUC {
                 factor = scale.y;
             return factor * Vector3.one;
         }
+		
+		/// <summary>
+        /// Returns the given vector rotated over the given amount of degrees
+        /// </summary>
+		public static Vector2 Rotate(this Vector2 v, float degrees) {
+			float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
+			float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
+
+			float tx = v.x;
+			float ty = v.y;
+			v.x = (cos * tx) - (sin * ty);
+			v.y = (sin * tx) + (cos * ty);
+			return v;
+		}
     }
 
 }

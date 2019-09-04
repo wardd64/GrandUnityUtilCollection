@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace GUC {
 
-    public static class Trnsf {
+    public static class Trans {
 
         /// <summary>
         /// Returns first instance of the given component in the chain of 

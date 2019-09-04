@@ -1,4 +1,4 @@
-﻿Shader "UnityFaction/Standard2Sided"
+﻿Shader "GUC/Standard2Sided"
 {
 Properties
 {

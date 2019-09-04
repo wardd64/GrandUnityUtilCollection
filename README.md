@@ -53,8 +53,8 @@ The most pure of Utility, working entirely in static classes. New classes may be
 | Rand     | Random number / object generation |
 | Rects    | Rect transforms, Rects, 2D transforms |
 | Text     | Text processing and strings |
-| Txtur    | Texture processing, 2D or render |
-| Trnsf    | 3D Transforms, Unity parent/Child, component etc. |
+| Image    | Texture processing, 2D or render |
+| Trans    | 3D Transforms, Unity parent/Child, component etc. |
 | Vect     | Manipulating vectors of any dimension |
 | Varia    | All the rest |
 

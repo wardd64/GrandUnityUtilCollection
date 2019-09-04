@@ -1,4 +1,4 @@
-﻿Shader "UnityFaction/UVScroll" 
+﻿Shader "GUC/UVScroll" 
 {
 	Properties
 	{

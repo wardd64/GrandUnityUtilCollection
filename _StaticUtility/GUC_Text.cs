@@ -81,6 +81,33 @@ namespace GUC {
         }
 
         /// <summary>
+        /// Tries to parse a string of the form h:mm:ss.f
+        /// yielding total amount of seconds. Returns true if string 
+        /// had an expected format that could successfully be parsed.
+        /// </summary>
+        public static bool TryParseTimeString(string input, out float result) {
+            result = 0f;
+            if(string.IsNullOrEmpty(input))
+                return false;
+            string[] parts = input.Split(':');
+            int nParts = parts.Length;
+
+            float seconds = 0f, minutes = 0f, hours = 0f;
+            bool parseError = false;
+
+            parseError |= nParts > 3;
+            if(nParts == 3)
+                parseError |= float.TryParse(parts[nParts - 3], out hours);
+            if(nParts >= 2)
+                parseError |= float.TryParse(parts[nParts - 2], out minutes);
+            if(nParts >= 1)
+                parseError |= float.TryParse(parts[nParts - 1], out seconds);
+
+            result = (hours * 60f + minutes) * 60f + seconds;
+            return !parseError;
+        }
+
+        /// <summary>
         /// Returns the same string as the input, but with the first 
         /// character capitalized if possible.
         /// </summary>

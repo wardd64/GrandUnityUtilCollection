@@ -6,5 +6,5 @@
 /// as animators and particle systems.
 /// </summary>
 public class FrameData {
-    public static float timeOffset, timeToRight, frameInterval;
+    public static float timeToLeft, timeToRight, frameInterval;
 }

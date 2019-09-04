@@ -68,9 +68,9 @@ public class ParticleSystemData : ComponentData{
         float deltaTime = FrameData.frameInterval;
         float lerpTime;
         if(IsLoopingType(target))
-            lerpTime = GUC.Math.Repeat(this.time + FrameData.timeOffset, loopTime);
+            lerpTime = GUC.Math.Repeat(this.time + FrameData.timeToLeft, loopTime);
         else if(this.time > 0f)
-            lerpTime = Mathf.Clamp(this.time + FrameData.timeOffset, 0f, loopTime);
+            lerpTime = Mathf.Clamp(this.time + FrameData.timeToLeft, 0f, loopTime);
         else if(right.time > 0f)
             lerpTime = Mathf.Clamp(right.time - FrameData.timeToRight, 0f, loopTime);
         else

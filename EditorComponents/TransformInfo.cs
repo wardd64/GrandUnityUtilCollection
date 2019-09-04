@@ -29,7 +29,7 @@ public class TransformInfoEditor : Editor {
 		GUILayout.Label("");
 
 		GUILayout.Label("Transform index path:");
-		GUILayout.Label(GUC.Trnsf.GetIndexPath(transform));
+		GUILayout.Label(GUC.Trans.GetIndexPath(transform));
 		GUILayout.Label("");
 
         GUILayout.Label("Absolute transform matrix:");

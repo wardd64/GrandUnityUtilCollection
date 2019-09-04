@@ -2,7 +2,7 @@
 
 namespace GUC {
 
-    public static class Txtur {
+    public static class Image {
 
         /// <summary>
         /// Convert a pair of pixel indices to a pair of normalized coordinates 
